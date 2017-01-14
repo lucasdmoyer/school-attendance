@@ -26,9 +26,33 @@
     }
 }());
 
+var model = {
+    students: [
+        {
+            name : 'Tabby'
+        },
+        {
+            name : 'Tiger'
+        },
+        {
+            name : 'Scaredy'
+        },
+        {
+            name : 'Shadow'
+        },
+        {
+            name : 'Sleepy'
+        }
+    ]
+};
 
+var octopus = {
 
+};
 
+var view = {
+
+};
 
 /* STUDENT APPLICATION
 $(function() {
