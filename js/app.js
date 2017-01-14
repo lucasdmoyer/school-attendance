@@ -27,7 +27,10 @@
 }());
 
 
-/* STUDENT APPLICATION */
+
+
+
+/* STUDENT APPLICATION
 $(function() {
     var attendance = JSON.parse(localStorage.attendance),
         $allMissed = $('tbody .missed-col'),
@@ -82,3 +85,4 @@ $(function() {
 
     countMissing();
 }());
+*/
