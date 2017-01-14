@@ -48,11 +48,49 @@ var model = {
 
 var octopus = {
 
+    init: function() {
+        // tell our views to initialize
+        view.init();
+    },
+    getStudents: function() {
+        return model.students;
+    }
 };
 
 var view = {
+    init: function() {
 
+        // store pointers to our DOM elements for easy access later
+        this.students = document.getElementById('students');
+
+
+        // render this view (update the DOM elements with the right values)
+        this.render();
+    },
+
+    render: function() {
+        var student, elem, i;
+        var students = octopus.getStudents();
+        //this.studentRow.innerHTML = '';
+
+        // loop over the cats
+        for (i = 0; i < students.length; i++) {
+            // this is the cat we're currently looping over
+            student = students[i];
+            console.log(student);
+
+            // make a new cat list item and set its text
+            elem = document.createElement('tr');
+            elem.textContent = student.name;
+
+            // finally, add the element to the list
+            this.students.appendChild(elem);
+        }
+    }
 };
+
+// make it go!
+octopus.init();
 
 /* STUDENT APPLICATION
 $(function() {
